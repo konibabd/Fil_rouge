@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\directeurs;
 
+
 class DirecteurController extends Controller
 {
     //
@@ -63,6 +64,11 @@ class DirecteurController extends Controller
                 return redirect('/login');
             }
         }
+    }
+
+    public function dashboard()
+    {
+        return view('directeurs.dashboard');
     }
 
 }

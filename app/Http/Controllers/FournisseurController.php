@@ -73,6 +73,8 @@ class FournisseurController extends Controller
     public function show($id)
     {
         //
+        $fournisseurs = fournisseurs::findOrFail($id);
+        return view('fournisseurs.show', compact('fournisseurs'));
     }
 
     /**
@@ -119,5 +121,8 @@ class FournisseurController extends Controller
     public function destroy($id)
     {
         //
+        $supprimer = fournisseurs::findOrFail($id);
+        $supprimer->delete();
+        return redirect('/fournisseurs/list');
     }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DirecteurController;
+use App\Http\Models\directeurs;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/directeur-register', [App\Http\Controllers\DirecteurController::class, 'viewForm'])->name('dir.formview');
 Route::post('/admin-create', [App\Http\Controllers\DirecteurController::class, 'registerDirecteur'])->name('dir.create');
+Route::get('/directeur', [App\Http\Controllers\DirecteurController::class, 'dashboard'])->name('directeurs.dashboard');
 
 Route::get('/secret-register', [App\Http\Controllers\SecretaireController::class, 'viewForm'])->name('secret.formview');
 Route::post('/secret-create', [App\Http\Controllers\SecretaireController::class, 'registerSecret'])->name('secret.create');
@@ -38,5 +40,8 @@ Route::get('/fournisseurs/create', [App\Http\Controllers\FournisseurController::
 Route::post('/fournisseurs/list', [App\Http\Controllers\FournisseurController::class, 'store'])->name('fournisseurs.register');
 Route::get('/fournisseur/{fourn}/edit', [App\Http\Controllers\FournisseurController::class, 'edit'])->name('fournisseurs.edit');
 Route::patch('/fournisseurs/{fourn}/update', [App\Http\Controllers\FournisseurController::class, 'update'])->name('fournisseurs.update');
+Route::get('/fournisseurs/{fourn}/show', [App\Http\Controllers\FournisseurController::class, 'show'])->name('fournisseurs.show');
+Route::post('/fournisseurs/{fourn}/destroy', [App\Http\Controllers\FournisseurController::class, 'destroy'])->name('fournisseurs.destroy');
 
 // Route::resource('/fournisseurs', FournisseurController::class);
+

@@ -5,7 +5,7 @@
     <h3 class="border-bottom pb-2 mb-4">Liste des fournisseurs</h3>
 
     <div class="mt-4">
-        <div  class="d-flex justify-content-between mb-2">
+        <div  class="d-flex justify-content-end mb-2">
         <div><a href="{{route('fournisseurs.create')}}" class="btn btn-primary">Ajouter un nouveau fournisseur</a></div>
         </div>
 
@@ -33,8 +33,15 @@
                     <td>{{ $fournisseurs->email }}</td>
                     <td>{{ $fournisseurs->telephone }}</td>
                     <td>
-                        <a href="{{route('fournisseurs.edit', $fournisseurs->id )}}" class="btn btn-info">Editer</a>
-                        <a href="#" class="btn btn-danger">Supprimer</a>
+                        <a href="{{ route('fournisseurs.show', $fournisseurs->id)}}" class="btn btn-info">Detail</a>
+                        <a href="{{ route('fournisseurs.edit', $fournisseurs->id )}}" class="btn btn-primary">Editer</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('fournisseurs.destroy', $fournisseurs->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" >Supprimer</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach

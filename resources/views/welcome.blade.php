@@ -9,13 +9,14 @@
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
     <title>Chiyè Goundo</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/carousel.css')}}" rel="stylesheet">
   <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jbz_of2r3ygotQi2IkGF6_CB3--b1EcDr5aj6ewAqz_PhxFXMZmW7R1YifQJ8eo7GSSGiUoM9rGdrLlaS3WA-ZTyEkhm5vN2WjZCSAhyh64" charset="UTF-8"></script></head>
@@ -44,10 +45,11 @@
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <button type="button" class="btn btn-outline-warning"><i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp <a href="" style="text-decoration:none; text-light">Panier</a></button>
+            <button type="button" class="btn logg  btn-outline-warning"><i class="fa panier fa-shopping-cart" aria-hidden="true"></i> &nbsp <a href="" style="text-decoration:none; text-light"></a></button>
           </form>
           <form class="form-inline mt-2 mt-md-0">
-            <button class="btn btn-outline-warning" type="submit"><a style="text-decoration:none; color: primary" href="/login">Connexion</a></button>
+            <button class="btn btn-outline-warning" type="submit"><a style="text-decoration:none; color: #fff" href="/login">Connexion</a></button>
+            <button class="btn logge btn-outline-warning" type="submit"><a style="text-decoration:none; color:#fff;" href="/register">Inscription</a></button>
           </form>
           <!-- <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Rechercher" aria-label="Search">
@@ -91,7 +93,7 @@
             <div class="container">
               <div class="carousel-caption text-right">
                 <h1>Un service de qualité et de professionnalisme.</h1>
-                <p>Pour nous chaque client compte, votre satifaction est notre objestif de tous les jours.</p>
+                <p>Pour nous chaque client compte, votre satifaction est notre objectif de tous les jours.</p>
                 <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
               </div>
             </div>
