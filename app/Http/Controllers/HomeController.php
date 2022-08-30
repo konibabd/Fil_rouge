@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Http\Models\directeurs;
+use App\Http\Models\secretaires;
+
 
 class HomeController extends Controller
 {
@@ -28,31 +31,23 @@ class HomeController extends Controller
         // dd($user);
         if($user->statut == 'directeur')
         {
-            $directeur = directeurs::Where('userId', $user->id)->first();
-            return view('directeurs.dashboard', compact('directeur'));
+           
+            return view('directeurs.dashboard', );
         }
-        elseif($user->statut == 'secretaires')
+        elseif($user->statut == 'secretaire')
         {
             return view('secretaires.dashboard');
         }
 
+        elseif($user->statut == 'client')
+        {
+            return view('clients.dashboard');
+        }
        
       else{
             return view('home');
         }
-    
-
 
     }
 
-    // public function liste()
-    // {
-    //     return view('administrateurs.listeEmployes');
-    // }
-
-    public function welcome()
-
-    {
-        return view('welcome');
-    }
 }

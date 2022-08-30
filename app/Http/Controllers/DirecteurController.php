@@ -14,6 +14,12 @@ class DirecteurController extends Controller
         return view('directeurs.directeurRegister');
     }
 
+    public function dashboard()
+    {
+        return view('directeurs.dashboard');
+    }
+    
+
     //cet objet est chargé de l'envoi des données dans la base de donnees -->
     
     public function registerDirecteur(Request $request)
@@ -66,9 +72,6 @@ class DirecteurController extends Controller
         }
     }
 
-    public function dashboard()
-    {
-        return view('directeurs.dashboard');
-    }
+
 
 }

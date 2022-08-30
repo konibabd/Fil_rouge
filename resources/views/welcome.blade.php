@@ -19,11 +19,12 @@
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/carousel.css')}}" rel="stylesheet">
+    
   <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jbz_of2r3ygotQi2IkGF6_CB3--b1EcDr5aj6ewAqz_PhxFXMZmW7R1YifQJ8eo7GSSGiUoM9rGdrLlaS3WA-ZTyEkhm5vN2WjZCSAhyh64" charset="UTF-8"></script></head>
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #fe9800;">
+      <nav class="cc-navbar navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #fe9800;">
         <!-- <a class="navbar-brand" href="#">ChiyèGoundo</a> -->
         <img src="{{ asset('images/CHIYEGOUNDO.png')}}" class="rounded-circle" style="width: 100px; height: 100px"; alt="...">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,29 +33,28 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">ACCUEIL<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">PRODUITS</a>
+              <a class="nav-link" href="#categorie">Catégorie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">SERVICES</a>
+              <a class="nav-link" href="#">Découvrir</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#propos">A propos</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <button type="button" class="btn logg  btn-outline-warning"><i class="fa panier fa-shopping-cart" aria-hidden="true"></i> &nbsp <a href="" style="text-decoration:none; text-light"></a></button>
+            <button type="button" class="btn logg  btn-outline-warning"><a style="text-decoration:none; color: #fff" href="/commandes/create" >Passer une commande</a></button>
           </form>
           <form class="form-inline mt-2 mt-md-0">
             <button class="btn btn-outline-warning" type="submit"><a style="text-decoration:none; color: #fff" href="/login">Connexion</a></button>
             <button class="btn logge btn-outline-warning" type="submit"><a style="text-decoration:none; color:#fff;" href="/register">Inscription</a></button>
           </form>
-          <!-- <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Rechercher" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Rechercher</button>
-          </form> -->
         </div>
       </nav>
     </header>
@@ -117,24 +117,24 @@
       <div class="container marketing">
 
         <!-- Three columns of text below the carousel -->
-        <div class="row">
+        <div id="categorie" class="row">
           <div class="col-lg-4">
             <img class="rounded-circle" src="{{ asset('images/poussinghgjg.jpg')}}" alt="Generic placeholder image" width="140" height="140">
             <h2>Poulet chair</h2>
             <p>Nous produisons des poulets chairs de meilleure qualité à des prix très abordables.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Ajouter au panier &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button">Détails &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded-circle" src="{{ asset('images/téléchargement (2).jpg')}}" alt="Generic placeholder image" width="140" height="140">
             <h2>Bleu Hollandais</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Ajouter au panier &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button">Détails &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded-circle" src="{{ asset('images/Comment-elever-des-poules-pondeuses-chez-soi-Nutri-Green-Planet-1080x675.jpg')}}" alt="Generic placeholder image" width="140" height="140">
             <h2>Poule pondeuse</h2>
             <p>On appelle poule pondeuse une poule issue de lignées spécialisées qui produit des œufs pour la consommation humaine. Ces œufs ne sont pas fécondés.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Ajouter au panier &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button">Détails &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -145,7 +145,7 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">’Wassachiè’ le Champion de l’espèce de poulet la plus prisée au Mali.<span class="text-muted"></span></h2>
+            <h2 class="featurette-heading">’Wassachiè’.<span class="text-muted"></span></h2>
             <p class="lead">L’un des objectifs du Programme de productivité agricole en Afrique de l’Ouest (PPAAO), créé en 2008 était de proposer des solutions innovantes pour booster la productivité agricole, afin de renforcer la sécurité alimentaire et nutritionnelle des populations de la région.</p>
           </div>
           <div class="col-md-5">
@@ -157,11 +157,11 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Des poussins 3/4 disponibles. <span class="text-muted"></span></h2>
+            <h2 class="featurette-heading">Les poussins 3/4. <span class="text-muted"></span></h2>
             <p class="lead">L'espérance de vie d'une poule pondeuse est d'environ 10 ans : elle commence à pondre vers ses 5 à 6 mois. Sa ponte diminue vers ses 3 ans.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="{{ asset('images/222678_pbp.jpg')}}" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="{{ asset('images/7189096-11029947.jpg')}}" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -180,93 +180,75 @@
         <hr class="featurette-divider">
 
         <!-- /END THE FEATURETTES -->
-
-        <section class="page-section" id="contact">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Nous Contactez</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <!-- <div class="divider-custom-icon"><i class="fas fa-star"></i></div> -->
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Contact Section Form-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <label for="name">Nom</label>
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <label for="email">Adresse email</label>
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <label for="phone">Numero de telephone</label>
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <label for="message">Message</label>
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Envoyer</button>
-                        </form>
+        <div class="container">
+              <div class="col row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                      <h5>titre</h5>
+                      <p class="card-text">
+                        commentaires
+                      </p>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </section>
-
+                <div class="col">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                      <h5>titre</h5>
+                      <p class="card-text">
+                        commentaires
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                      <h5>titre</h5>
+                      <p class="card-text">
+                        commentaires
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="..." class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                      <h5>titre</h5>
+                      <p class="card-text">
+                        commentaires
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+            
+        
       </div><!-- /.container -->
 
       <hr class="featurette-divider">
 
-      <!-- FOOTER -->
-      <footer class="footer text-center">
+      
+    </main>
+
+<!-- FOOTER -->
+<footer class="footer text-center" style="background:#fe9800">
             <div class="container">
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Adresse</h4>
+                        <h4 id="contact" class="text-uppercase mb-4">Contact</h4>
                         <p class="lead mb-0">
-                            Entreprise Kouma - Poussin SARL
-                            <br />
-                            Souleymanebougou, (Moribabougou)
+                            Entreprise Kouma - Poussin SARL <br />
+                            Souleymanebougou, (Moribabougou)<br />
+                            koumapoussin@gmail.com <br />
+                            (+223) 20253045
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
@@ -279,7 +261,7 @@
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">A propos</h4>
+                        <h4 id="propos" class="text-uppercase mb-4">A propos</h4>
                         <p class="lead mb-0">
                             Créée en 2013, Kouma - Poussin est une Entreprise avicole de reproduction, de vente de volailles, de conseils et d'accompagnement
                             <!-- <a href="http://startbootstrap.com">Entreprise Kouma - Poussin SARL</a> -->
@@ -289,7 +271,6 @@
                 </div>
             </div>
         </footer>
-    </main>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

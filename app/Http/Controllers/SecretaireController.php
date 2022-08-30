@@ -64,4 +64,9 @@ class SecretaireController extends Controller
             }
         }
     }
+
+    public function dashboardSecret()
+    {
+        return view('secretaires.dashboard');
+    }
 }
