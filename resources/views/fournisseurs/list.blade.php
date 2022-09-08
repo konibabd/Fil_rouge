@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.partout')
 
-@section('content')
+@section('contenu')
 <div class="my-3 p-3 bg-body rounded shadow-sm">
     <h3 class="border-bottom pb-2 mb-4">Liste des fournisseurs</h3>
 
     <!-- <div class="alert alert-success">
-        <h3>vhmh</h3>
+        <h3>Ajouter avec succes</h3>
     </div> -->
 
     <div class="mt-4">

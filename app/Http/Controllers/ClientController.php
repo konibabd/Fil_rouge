@@ -13,6 +13,16 @@ class ClientController extends Controller
         return view('clients.clientRegister');
     }
 
+    public function dashboardClient()
+    {
+        return view('clients.dashboard');
+    }
+
+    public function master()
+    {
+        return view('layouts.master');
+    }
+
     //cet objet est chargé de l'envoi des données dans la base de donnees -->
     
     public function registerClient(Request $request)

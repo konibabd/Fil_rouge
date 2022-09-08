@@ -20,6 +20,11 @@ class PersonnelController extends Controller
         return view('personnels/list', compact('personnel'));
     }
 
+    public function dashboard()
+    {
+        return view('personnels.personnel');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -48,12 +53,25 @@ class PersonnelController extends Controller
                 'adresse' => ['required', 'string', 'max:150'],
                 'email' => ['required', 'string', 'max:100'],
                 'telephone' => ['required', 'string', 'max:25'],
-                ]
+                'password' => ['required', 'string', 'min:8', 'max:20', 'confirmed'],
+            ]
         );
         
         if($verification)
         {
             // 
+            $user = User::create(
+                [
+                'name' => $request['prenom'],
+                'email' => $request['email'],
+                'password' => bcrypt($request['password']),
+                'statut' => 'personnel',
+                
+                ]
+            );
+
+            if($user);
+            {
                 $personnel = personnels::create(
                     [
                         'nom' => $request['nom'],
@@ -62,11 +80,17 @@ class PersonnelController extends Controller
                         'adresse' => $request['adresse'],
                         'email' => $request['email'],
                         'telephone' => $request['telephone'],
-                    ]
+                        'password' => bcrypt($request['password']),
+                        'userId' => $user->id,
+                        ]
                 );
+
                 return redirect('/personnels/list');
-        } 
+                // return redirect('/login');
+            }
+        }
     }
+ 
 
     /**
      * Display the specified resource.
@@ -112,6 +136,8 @@ class PersonnelController extends Controller
                 'adresse' => 'required',
                 'email' => 'required',
                 'telephone' => 'required',
+                'password' => 'required',
+
             ]);
             $personnel = personnels::whereId($id)->update($editer);
             return redirect('/personnels/list');

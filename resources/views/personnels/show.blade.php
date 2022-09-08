@@ -1,6 +1,6 @@
 {{ $personnels->nom }}
 {{ $personnels->prenom }}
-{{ $personnels->poste }}
+<!-- {{ $personnels->poste }} -->
 {{ $personnels->adresse }}
 {{ $personnels->email }}
 {{ $personnels->telephone }}

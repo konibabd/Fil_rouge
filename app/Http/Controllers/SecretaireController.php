@@ -13,6 +13,23 @@ class SecretaireController extends Controller
         return view('secretaires.secretRegister');
     }
 
+    public function compte()
+    {
+        //
+        $secretaire = secretaires::all();
+        return view('secretaires.compte', compact('secretaire'));
+    }
+
+    public function dashboardSecret()
+    {
+        return view('secretaires.dashboard');
+    }
+
+    public function monapp()
+    {
+        return view('layouts.monapp');
+    }
+
     //cet objet est chargé de l'envoi des données dans la base de donnees -->
     
     public function registerSecret(Request $request)
@@ -57,16 +74,46 @@ class SecretaireController extends Controller
                         'userId' => $user->id,
                         ]
                 );
-
-                // ici on va rediriger la secretaire sur la page de login
-
-                return redirect('/login');
+                $secretaire = secretaires::all();
+                return view('/secretaires.compte', compact('secretaire'));
             }
         }
     }
 
-    public function dashboardSecret()
+    // public function compte()
+    // {
+    //     return view ('secretaires.compte');
+    // }
+
+    public function edit($id)
     {
-        return view('secretaires.dashboard');
+        //
+        $secretaire = secretaires::findOrFail($id);
+        return view('secretaires.edit', compact('secretaire'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        //
+        {
+            $editer = $request->validate([
+                'nom' => 'required',
+                'prenom' => 'required',
+                'telephone' => 'required',
+                'email' => 'required',
+                'password' => 'required',
+
+            ]);
+            $secretaire = secretaires::whereId($id)->update($editer);
+            return redirect('/secretaires/compte');
+        }
+    }
+
+    public function destroy($id)
+    {
+        //
+        $supprimer = secretaires::findOrFail($id);
+        $supprimer->delete();
+        return redirect('/secretaires/compte');
     }
 }

@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.monapp')
 
-@section('content')
+@section('contenu')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -64,7 +64,7 @@
                             <label for="quantite" class="col-md-4 col-form-label text-md-end">{{ __('Quantité') }}</label>
 
                             <div class="col-md-6">
-                                <input id="quantite" type="quantite" class="form-control @error('quantite') is-invalid @enderror" name="quantite" value="{{ old('quantite') }}" required autocomplete="quantite">
+                                <input id="quantite" type="number" class="form-control @error('quantite') is-invalid @enderror" name="quantite" value="{{ old('quantite') }}" required autocomplete="quantite">
 
                                 @error('quantite')
                                     <span class="invalid-feedback" role="alert">
@@ -94,7 +94,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Envoyer') }}
+                                    {{ __('Enregister') }}
                                 </button>
                             </div>
                         </div>

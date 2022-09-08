@@ -26,14 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //return view('home');
+        
         $user = Auth::user();
-        // dd($user);
+        
         if($user->statut == 'directeur')
         {
-           
             return view('directeurs.dashboard', );
         }
+        
         elseif($user->statut == 'secretaire')
         {
             return view('secretaires.dashboard');
@@ -42,6 +42,11 @@ class HomeController extends Controller
         elseif($user->statut == 'client')
         {
             return view('clients.dashboard');
+        }
+
+        elseif($user->statut == 'personnel')
+        {
+            return view('personnels.dashboard');
         }
        
       else{

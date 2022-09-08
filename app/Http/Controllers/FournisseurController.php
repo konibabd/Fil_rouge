@@ -108,7 +108,9 @@ class FournisseurController extends Controller
                 'telephone' => 'required',
             ]);
             $fournisseur = fournisseurs::whereId($id)->update($editer);
-            return redirect('/fournisseurs/list');
+            return redirect('/fournisseurs/list')->with(
+                'success', 'Fournisseur ajouté avec succès'
+            );
         }
     }
 

@@ -18,6 +18,11 @@ class DirecteurController extends Controller
     {
         return view('directeurs.dashboard');
     }
+
+    public function partout()
+    {
+        return view('layouts.partout');
+    }
     
 
     //cet objet est chargé de l'envoi des données dans la base de donnees -->

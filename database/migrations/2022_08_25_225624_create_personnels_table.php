@@ -21,6 +21,9 @@ class CreatePersonnelsTable extends Migration
             $table->string('adresse');
             $table->string('email');
             $table->string('telephone');
+            $table->string('password');
+            $table->unsignedBigInteger('userId');
+            $table->foreign('userId')->references('Id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -16,5 +16,12 @@ class personnels extends Model
         'adresse',
         'email',
         'telephone',
+        'password',
+        'userId',
     ];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'userId');
+    }
 }

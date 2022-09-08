@@ -21,12 +21,20 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'poste',
+        'adresse',
+        'telephone',
         'statut'
     ];
 
     public function directeurs()
     {
         return $this->hasMany(Directeurs::class, 'userId');
+    }
+
+    public function personnels()
+    {
+        return $this->hasMany(Personnels::class, 'userId');
     }
 
     public function secretaires()

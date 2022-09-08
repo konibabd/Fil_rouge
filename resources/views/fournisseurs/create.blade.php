@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.partout')
 
-@section('content')
+@section('contenu')
 
 <!-- ce code dessous permet d'afficher les erreurs dans votre formulaire dans le navigateur -->
 

@@ -1,8 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.monapp')
 
-@section('content')
+@section('contenu')
+
 <div class="my-3 p-3 bg-body rounded shadow-sm">
-    <h3 class="border-bottom pb-2 mb-4 bg-gradient-info">Liste des commandes</h3>
+    <h3 class="border-bottom pb-2 mb-4">Liste des commandes</h3>
 
             <!-- <div class="alert alert-success">
                 <h3></h3>

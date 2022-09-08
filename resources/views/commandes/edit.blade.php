@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.monapp')
 
-@section('content')
+@section('contenu')
 
 <!-- ce code dessous permet d'afficher les erreurs dans votre formulaire dans le navigateur -->
 
@@ -81,7 +81,7 @@
                             <label for="quantite" class="col-md-4 col-form-label text-md-end">{{ __('Quantité') }}</label>
 
                             <div class="col-md-6">
-                                <input id="quantite" type="text" value={{$commande->quantite}} class="form-control @error('quantite') is-invalid @enderror" name="quantite" value="{{ old('quantite') }}" required autocomplete="quantite" autofocus>
+                                <input id="quantite" type="number" value={{$commande->quantite}} class="form-control @error('quantite') is-invalid @enderror" name="quantite" value="{{ old('quantite') }}" required autocomplete="quantite" autofocus>
 
                                 @error('quantite')
                                     <span class="invalid-feedback" role="alert">
