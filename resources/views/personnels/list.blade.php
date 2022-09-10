@@ -21,7 +21,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Nom</th>
                     <th scope="col">Prénom</th>
-                    <!-- <th scope="col">Poste</th> -->
                     <th scope="col">Adresse</th>
                     <th scope="col">Email</th>
                     <th scope="col">Téléphone</th>
@@ -35,7 +34,6 @@
                     <th scope="row">{{ $loop->index + 1 }}</th>
                     <td>{{ $personnels->nom }}</td>
                     <td>{{ $personnels->prenom }}</td>
-                    <!-- <td>{{ $personnels->poste }}</td> -->
                     <td>{{ $personnels->adresse }}</td>
                     <td>{{ $personnels->email }}</td>
                     <td>{{ $personnels->telephone }}</td>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DirecteurController;
 use App\Http\Models\directeurs;
 use App\Http\Models\secretaires;
+use App\Http\Models\Panier;
 
 
 
@@ -38,6 +39,7 @@ Route::get('poussin3', function (){
 Route::get('partout.view',  [App\Http\Controllers\DirecteurController::class, 'partout'])->name('voirpartout');
 Route::get('monapp.view',  [App\Http\Controllers\SecretaireController::class, 'monapp'])->name('monappartout');
 Route::get('master.view',  [App\Http\Controllers\ClientController::class, 'master'])->name('masterpartout');
+Route::get('client.view',  [App\Http\Controllers\ClientController::class, 'client'])->name('clientpartout');
 
 // Route::get("/directeur", [DirecteurController::class, 'index']);
 
@@ -98,3 +100,24 @@ Route::patch('/categories/{cat}/update', [App\Http\Controllers\CategorieControll
 Route::get('/categories/{cat}/destroy', [App\Http\Controllers\CategorieController::class, 'destroy'])->name('categories.destroy');
 
 
+// Route::resource('/paniers', 'PanierController');
+Route::get('/paniers/index', [App\Http\Controllers\PanierController::class, 'index'])->name('panier.index');
+Route::get('/paniers/create', [App\Http\Controllers\PanierController::class, 'create'])->name('paniers.create');
+Route::post('/paniers/index', [App\Http\Controllers\PanierController::class, 'store'])->name('paniers.register');
+Route::get('/panier/{pan}/edit', [App\Http\Controllers\PanierController::class, 'edit'])->name('paniers.edit');
+Route::patch('/paniers/{pan}/update', [App\Http\Controllers\PanierController::class, 'update'])->name('paniers.update');
+Route::get('/paniers/{pan}/destroy', [App\Http\Controllers\PanierController::class, 'destroy'])->name('paniers.destroy');
+
+
+
+// Route::get('panier', function(){
+//     return view('paniers/index');
+// });
+
+// Route::get('panier1', function(){
+//     return view('paniers/create');
+// });
+
+// Route::post('panier2', function(){
+//     return view('paniers/edit');
+// });

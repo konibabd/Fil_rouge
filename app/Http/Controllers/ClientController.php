@@ -23,6 +23,11 @@ class ClientController extends Controller
         return view('layouts.master');
     }
 
+    public function client()
+    {
+        return view('layouts.client');
+    }
+
     //cet objet est chargé de l'envoi des données dans la base de donnees -->
     
     public function registerClient(Request $request)

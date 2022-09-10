@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.partout')
 
-@section('content')
+@section('contenu')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -42,22 +42,6 @@
                             </div>
                         </div>
                         <!-- end prenom -->
-
-                        <!-- champ poste -->
-                        <!-- <div class="row mb-3">
-                            <label for="poste" class="col-md-4 col-form-label text-md-end">{{ __('Poste') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="poste" type="text" class="form-control @error('poste') is-invalid @enderror" name="poste" value="{{ old('poste') }}" required autocomplete="poste" autofocus>
-
-                                @error('poste')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div> -->
-                        <!-- end poste -->
 
                         <!-- champ adresse -->
                         <div class="row mb-3">

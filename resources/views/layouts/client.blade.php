@@ -24,7 +24,7 @@
   <body>
 
     <!-- Modal -->
-  <div class="modal" tabindex="-1" role="dialog">
+  <!-- <div class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -42,10 +42,10 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
     <header>
-      <nav class="cc-navbar navbar navbar-expand-md navbar-dark fixed-top">
+      <nav class="cc-navbar navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #291B0E">
         <!-- <a class="navbar-brand" href="#">ChiyèGoundo</a> -->
         <img src="{{ asset('images/IMG-20220210-WA0000.png')}}" class="rounded-circle" style="width: 100px; height: 100px"; alt="...">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,33 +54,72 @@
         <div class="collapse navbar-collapse ml-5" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/">Accueil<span class="sr-only">(current)</span></a>
+              <a class="nav-link text-white" href="/client">Accueil<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#categorie">Catégorie</a>
+              <a class="nav-link text-white" href="#categorie">Catégorie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#decouverte">Découverte</a>
+              <a class="nav-link text-white" href="#decouverte">Découverte</a>
+            </li>
+            <li class="nav-item text-white">
+                <a class="nav-link text-white" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link text-white" href="#propos">A propos</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#propos">A propos</a>
+            <!-- <li class="nav-item" style="margin-left:150px; margin-top: 10px">
+            <a style="text-decoration:none; color: #fff" href="/paniers/create" ><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li> -->
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow" style="margin-left: 500px;">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                <img class="img-profile rounded-circle" style="width: 30px; height: 30px;"
+                src="{{asset('img/undraw_profile.svg')}}">
+              </a>
+              <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Profile
+                    </a>
+                    <!-- <a class="dropdown-item" href="#">
+                      <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Settings
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Activity Log
+                    </a> -->
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Déconnexion
+                    </a>
+                </div>
             </li>
           </ul>
-          
           <form class="form-inline mt-2 mt-md-0">
-            <a class="btn btn-outline-warning" style="text-decoration:none; color: #fff" href="{{ route ('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
-            <a class="btn logge btn-outline-warning" style="text-decoration:none; color:#fff;" href="/client-register"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+            <!-- <button type="button" class="btn logg  btn-outline-warning"><a style="text-decoration:none; color: #fff" href="/paniers/create" ><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></button> -->
+            <!-- <button type="button" class="btn logg  btn-outline-warning"><a style="text-decoration:none; color: #fff" href="{{ route('logout') }}" ><i class="fa fa-sign-out" aria-hidden="true"></i></a></button> -->
           </form>
+          <!-- <form class="form-inline mt-2 mt-md-0">
+            <button class="btn btn-outline-secondary" type="submit"><a style="text-decoration:none; color: #fff" href="/login">Se connecter</a></button>
+            <button class="btn logge btn-outline-secondary" type="submit"><a style="text-decoration:none; color:#fff;" href="/client-register">S'inscrire</a></button>
+          </form> -->
         </div>
       </nav>
     </header>
 
     <main role="main">
 
-      <div id="myCarousel" class="carousel slide" style="color: #5a5a5a" data-ride="carousel">
+      <!-- <div id="myCarousel" class="carousel slide" style="color: #5a5a5a" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -92,19 +131,19 @@
             <div class="container">
               <div class="carousel-caption">
                 <h1>Production et vente de poussins d'un jour.</h1>
-                <p>Plus de 14000 oeufs engagés par semaine pour répondre à vos besoins partout au Mali.</p>
+                <p>Plus de 14000 oeufs engagés par semaine pour répondre à vos besoins partout au Mali.</p> -->
                 <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
-              </div>
+              <!-- </div>
             </div>
           </div>
           <div class="carousel-item">
             <img class="second-slide" src="{{ asset('images/Capture d’écran (114).png')}}" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Réussir vos projets avicole grâce à expertise.</h1>
-                <p>Développer les performances de votre structure avicole grâce à notre expertise, notre savoir-faire et notre accompagnement.</p>
+                <h1>Réussir vos projets avicoles grâce à notre expertise.</h1>
+                <p>Développer les performances de votre structure avicole grâce à notre expertise, notre savoir-faire et notre accompagnement.</p> -->
                 <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Apprendre plus</a></p> -->
-              </div>
+              <!-- </div>
             </div>
           </div>
           <div class="carousel-item">
@@ -112,9 +151,9 @@
             <div class="container">
               <div class="carousel-caption">
                 <h1>Tout savoir sur les types d'aliments volailles.</h1>
-                <p>Decouvrez les meilleurs aliments pour un élevage complet de vos poules.</p>
+                <p>Decouvrez les meilleurs aliments pour un élevage complet de vos poules.</p> -->
                 <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
-              </div>
+              <!-- </div>
             </div>
           </div>
         </div>
@@ -126,8 +165,11 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div>
+      </div> -->
 
+        <div class="row mt-5 mb-4">
+             @yield('contenu')
+        </div>
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
@@ -136,33 +178,33 @@
       <div class="container marketing">
 
         <!-- Three columns of text below the carousel -->
-        <div id="categorie" class="row">
+        <!-- <div id="categorie" class="row">
           <div class="col-lg-4">
             <img class="rounded-circle" src="{{ asset('images/poussinghgjg.jpg')}}" alt="Generic placeholder image" width="140" height="140">
             <h2>Poussin de chair</h2>
             <p>Ce sont des poulets qui sont élevés pour leur viande et non pas pour produire des œufs.
               Un poulet de chair, appelé aussi poulet à frire ou poulet à griller, est une Poule domestique...</p>
-            <p><a class="btn btn-secondary" href="/poussin1" role="button" data-dismiss="modal" aria-label="Close">Détails &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
+            <p><a class="btn btn-secondary" href="/poussin1" role="button" data-dismiss="modal" aria-label="Close">Détails &raquo;</a></p> -->
+          <!-- </div>/.col-lg-4 -->
+          <!-- <div class="col-lg-4">
             <img class="rounded-circle" src="{{ asset('images/trio110.jpg')}}" alt="Generic placeholder image" width="140" height="140">
             <h2>Bleu Hollandais</h2>
             <p>La Poule de Hollande du Nord, anciennement Bleue de Hollande est une race de poule domestique. 
                 Elle figure parmi les 108 races de poule reconnues du British Poultry Standard.</p>
-            <p><a class="btn btn-secondary" href="/poussin2" role="button">Détails &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
+            <p><a class="btn btn-secondary" href="/poussin2" role="button">Détails &raquo;</a></p> -->
+          <!-- </div>/.col-lg-4 -->
+          <!-- <div class="col-lg-4">
             <img class="rounded-circle" src="{{ asset('images/VIER-PFOTEN.jpg')}}" alt="Generic placeholder image" width="140" height="140">
             <h2>Poule pondeuse</h2>
             <p>On appelle poule pondeuse une poule issue de lignées spécialisées qui produit des œufs pour la consommation humaine. Ces œufs ne sont pas fécondés.</p>
-            <p><a class="btn btn-secondary" href="/poussin3" role="button">Détails &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+            <p><a class="btn btn-secondary" href="/poussin3" role="button">Détails &raquo;</a></p> -->
+          <!-- </div>/.col-lg-4 -->
+        <!-- </div>/.row -->
 
 
         <!-- START THE FEATURETTES -->
 
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider">
 
         <div class="row featurette">
           <div class="col-md-7">
@@ -193,20 +235,18 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">La poule rousse. <span class="text-muted"></span></h2>
-            <p class="lead">La poule rousse n’est pas une race ancienne. On la considère comme une hybride moderne, car elle est issue de plusieurs croisements. 
-              La majorité des poules rousses sont originaires de races venues des États-Unis comme la Rhode Island, la Sussex herminée ou la Combattant Indien. 
-              On la retrouve dans toutes les fermes aux États-Unis, mais aussi en France où la race est bien implantée.</p>
+            <h2 class="featurette-heading">La Noire du Berry. <span class="text-muted"></span></h2>
+            <p class="lead">La Noire du Berry arbore un plumage totalement noir et lustré. Sa crête rouge vif se dégage nettement, de même que ses yeux rouge-orangé. Ses pattes sont gris ardoise. Son cou est assez large, de même que son dos et ses épaules. Ses ailes sont bien développées.</p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" src="{{ asset('images/poule-race-orpington.jpg')}}" alt="Generic placeholder image">
           </div>
         </div>
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider"> -->
 
         <!-- /END THE FEATURETTES -->
-        <div class="container">
+        <!-- <div class="container">
             <div class="row justify-content-center">
               <h3 id="decouverte" class="text-center">Nos varietés de poules</h3>
             </div>
@@ -264,61 +304,61 @@
         </div>
 
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider"> -->
             
       <!--Section: Contact v.2-->
-      <div class="mb-4">
+      <!-- <div class="mb-4"> -->
 
         <!--Section heading-->
-        <h2 id="contact" class="h1-responsive font-weight-bold text-center my-4">Nous contactez</h2>
+        <!-- <h2 id="contact" class="h1-responsive font-weight-bold text-center my-4">Nous contactez</h2> -->
         <!--Section description-->
-        <p class="text-center w-responsive mx-auto mb-5">Avez-vous une question? N'hésitez pas de nous contacter directement. 
+        <!-- <p class="text-center w-responsive mx-auto mb-5">Avez-vous une question? N'hésitez pas de nous contacter directement. 
         Notre équipe vous fera un retour dans les heures qui suivent pour vous aider.</p>
 
-        <div class="row">
+        <div class="row"> -->
 
           <!--Grid column-->
-          <div class="col-md-9 mb-md-0 mb-5">
-              <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+          <!-- <div class="col-md-9 mb-md-0 mb-5">
+              <form id="contact-form" name="contact-form" action="mail.php" method="POST"> -->
 
                   <!--Grid row-->
-                  <div class="row">
+                  <!-- <div class="row"> -->
                       <!--Grid column-->
-                      <div class="col-md-6">
+                      <!-- <div class="col-md-6">
                           <div class="md-form mb-0">
                               <label for="name" class="">Votre nom</label>
                               <input type="text" id="name" name="name" class="form-control">
                           </div>
-                      </div>
+                      </div> -->
                       <!--Grid column-->
 
                       <!--Grid column-->
-                      <div class="col-md-6">
+                      <!-- <div class="col-md-6">
                           <div class="md-form mb-0">
                               <label for="email" class="">Votre mail</label>
                               <input type="text" id="email" name="email" class="form-control">
                           </div>
-                      </div>
+                      </div> -->
                       <!--Grid column-->
-                  </div>
+                  <!-- </div> -->
                   <!--Grid row-->
 
                   <!--Grid row-->
-                  <div class="row">
+                  <!-- <div class="row">
                       <div class="col-md-12">
                           <div class="md-form mb-0">
                               <label for="subject" class="">Sujet</label>
                               <input type="text" id="subject" name="subject" class="form-control">
                           </div>
                       </div>
-                  </div>
+                  </div> -->
                   <!--Grid row-->
 
                   <!--Grid row-->
-                  <div class="row">
+                  <!-- <div class="row"> -->
 
                       <!--Grid column-->
-                      <div class="col-md-12">
+                      <!-- <div class="col-md-12">
 
                           <div class="md-form">
                               <label for="message">Votre message</label>
@@ -326,20 +366,20 @@
                           </div>
 
                       </div>
-                  </div>
+                  </div> -->
                   <!--Grid row-->
 
-              </form>
+              <!-- </form> -->
 
-              <div class="text-center text-md-left mt-2">
+              <!-- <div class="text-center text-md-left mt-2">
                   <a class="btn btn-secondary text-light" onclick="document.getElementById('contact-form').submit();">Envoyer</a>
               </div>
               <div class="status"></div>
-          </div>
+          </div> -->
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-md-3 text-center">
+          <!-- <div class="col-md-3 text-center">
               <ul class="list-unstyled mb-0">
                   <li><i class="fas fa-map-marker-alt fa-2x"></i>
                       <p>Bamako, Mali</p>
@@ -353,17 +393,17 @@
                       <p>koumapoussin@gmail.com</p>
                   </li>
               </ul>
-          </div>
+          </div> -->
           <!--Grid column-->
-        </div>
-      </div>
+        <!-- </div>
+      </div> -->
       <!--Section: Contact v.2-->
 
       </div><!-- /.container -->
 
         <!-- <hr class="featurette-divider"> -->
       <!-- FOOTER -->
-          <footer class="footer text-center" style="background:#291B0E">
+        <footer class="footer text-center" style="background:#291B0E; margin-top: 65px;">
             <div class="container">
                 <div class="row">
                     <!-- Footer Location-->
@@ -395,8 +435,39 @@
                     </div>
                 </div>
             </div>
-          </footer>
+        </footer>
     </main>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Prêt à quitter?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Cliquer sur "Déconnexion" si vous voulez fermer la session ouverte.</div>
+                <div class="modal-footer">
+                    
+                    <button class="btn btn-secondary" type="" data-dismiss="modal">Annuler</button>
+                    <!-- <a class="btn btn-primary" href="">hgdmhgfh</a> -->
+                    <button class="btn btn-primary" class="dropdown-item text-white" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Déconnexion') }}
+                    
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                    </form>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -408,3 +479,4 @@
     <script src="{{ asset('js/holder.min.js')}}"></script>
   </body>
 </html>
+

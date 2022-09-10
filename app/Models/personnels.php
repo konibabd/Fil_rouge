@@ -12,7 +12,6 @@ class personnels extends Model
     protected $fillable = [
         'nom',
         'prenom',
-        'poste',
         'adresse',
         'email',
         'telephone',

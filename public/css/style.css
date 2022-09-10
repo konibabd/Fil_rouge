@@ -15,14 +15,22 @@
 
 .cc-navbar{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(41, 27, 14);
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54);
 }
 
-.cc-navbar .nav link{
+/* .cc-navbar .nav link{
     border-bottom: 1px solid transparent;
     transition: padding-bottom .4s ease-in-out border-color .3s;
+} */
+
+.cc-navbar .nav-link{
+    border-bottom: 1px solid transparent;
+    transition: padding-bottom .4s ease-in-out, border-color .3s ease;
 }
 
-/* .nav-link{
-    text-overflow: #fff;
-} */
+.cc-navbar .nav-link:hover{
+    padding-bottom: 20px;
+    border-bottom-color: goldenrod;
+}
+

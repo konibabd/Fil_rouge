@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,27 +40,25 @@
         <div class="collapse navbar-collapse ml-5" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" href="/">Accueil<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Accueil<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#categorie">Catégorie</a>
+              <a class="nav-link" href="#categorie">Catégorie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#decouverte">Découverte</a>
+              <a class="nav-link" href="#decouverte">Découverte</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#contact">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#propos">A propos</a>
+                <a class="nav-link" href="#propos">A propos</a>
             </li>
           </ul>
+          
           <form class="form-inline mt-2 mt-md-0">
-            <!-- <button type="button" class="btn logg  btn-outline-warning"><a style="text-decoration:none; color: #fff" href="/commandes/create" >Passer une commande</a></button> -->
-          </form>
-          <form class="form-inline mt-2 mt-md-0">
-            <button class="btn btn-outline-secondary" type="submit"><a style="text-decoration:none; color: #fff" href="/login">Se connecter</a></button>
-            <button class="btn logge btn-outline-secondary" type="submit"><a style="text-decoration:none; color:#fff;" href="/client-register">S'inscrire</a></button>
+          <a class="btn btn-outline-warning" style="text-decoration:none; color: #fff" href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+          <a class="btn logge btn-outline-warning" style="text-decoration:none; color:#fff;" href="/client-register"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
           </form>
         </div>
       </nav>

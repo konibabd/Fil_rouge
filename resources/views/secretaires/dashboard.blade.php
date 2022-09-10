@@ -87,6 +87,10 @@
     </div>
 </div>
 
+<div class="row">
+<img src="{{ asset('images/IMG_8172JPG.jpg')}}" style="width: 900px; height: 900px" alt="poussin d'un jour">
+</div>
+
 <!-- Content Row -->
 
 <!-- <div class="row">

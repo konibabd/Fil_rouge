@@ -27,7 +27,7 @@
                     <th colspan="2">Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-center">
                 @foreach($secretaire as $secretaires)
                 <tr>
                     <th scope="row">{{ $loop->index + 1 }}</th>

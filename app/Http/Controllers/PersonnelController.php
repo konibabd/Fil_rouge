@@ -49,9 +49,8 @@ class PersonnelController extends Controller
             [
                 'nom' => ['required', 'string', 'max:100'],
                 'prenom' => ['required', 'string', 'max:100'],
-                'poste' => ['required', 'string', 'max:100'],
                 'adresse' => ['required', 'string', 'max:150'],
-                'email' => ['required', 'string', 'max:100'],
+                'email' => ['required', 'unique:users', 'string', 'max:100'],
                 'telephone' => ['required', 'string', 'max:25'],
                 'password' => ['required', 'string', 'min:8', 'max:20', 'confirmed'],
             ]
@@ -65,6 +64,8 @@ class PersonnelController extends Controller
                 'name' => $request['prenom'],
                 'email' => $request['email'],
                 'password' => bcrypt($request['password']),
+                'adresse' => $request['adresse'],
+                'telephone' => $request['telephone'],
                 'statut' => 'personnel',
                 
                 ]
@@ -76,7 +77,6 @@ class PersonnelController extends Controller
                     [
                         'nom' => $request['nom'],
                         'prenom' => $request['prenom'],
-                        'poste' => $request['poste'],
                         'adresse' => $request['adresse'],
                         'email' => $request['email'],
                         'telephone' => $request['telephone'],
@@ -132,7 +132,6 @@ class PersonnelController extends Controller
             $editer = $request->validate([
                 'nom' => 'required',
                 'prenom' => 'required',
-                'poste' => 'required',
                 'adresse' => 'required',
                 'email' => 'required',
                 'telephone' => 'required',

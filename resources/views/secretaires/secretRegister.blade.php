@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Inscription Secretaire') }}</div>
+                <div class="card-header">{{ __('Compte Secretaire') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('secret.create') }}">
